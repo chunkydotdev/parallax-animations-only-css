@@ -1,0 +1,59 @@
+.image-parallax-container {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  view-timeline-name: --image-section;
+  view-timeline-axis: block;
+}
+
+.image-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  animation: image-parallax linear both;
+  animation-timeline: --image-section;
+  animation-range: cover;
+}
+
+@keyframes image-parallax {
+  from {
+    background-position: center 100%;
+  }
+  to {
+    background-position: center 0;
+  }
+}
+
+.image-parallax-container h2 {
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  font-size: 4rem;
+  text-shadow: 0 0 10px #fff;
+
+  span {
+    animation: text-parallax both;
+    animation-timeline: --image-section;
+    animation-range: contain cover;
+  }
+}
+
+@keyframes text-parallax {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(var(--i) * 10%));
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+  }
+}

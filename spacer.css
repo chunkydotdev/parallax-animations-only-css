@@ -1,0 +1,17 @@
+.spacer {
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.spacer h2 {
+  font-size: 4rem;
+}
+
+.spacer p {
+  font-size: 1.2rem;
+}
